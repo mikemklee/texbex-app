@@ -6,7 +6,7 @@ const passport = require("passport");
 const validateBookInput = require("../../validation/book");
 
 // Load book Model
-const Book = require("../../models/book");
+const Book = require("../../models/Book");
 
 // @route   GET api/books
 // @desc    Get books
