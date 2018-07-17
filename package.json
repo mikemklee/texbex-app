@@ -2,7 +2,7 @@
   "name": "texbex-app",
   "version": "1.0.0",
   "description": "application for trading used textbooks",
-  "main": "index.js",
+  "main": "server.js",
   "author": "Mike Lee",
   "license": "MIT",
   "dependencies": {
