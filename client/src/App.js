@@ -10,6 +10,7 @@ import Header from "components/header/Header";
 import Landing from "components/landing/Landing";
 import Register from "components/auth/Register";
 import Login from "components/auth/Login";
+import PostBook from "components/postBook/PostBook";
 import NotFoundPage from "components/common/NotFoundPage";
 
 class App extends Component {
@@ -23,6 +24,7 @@ class App extends Component {
               <Route exact path="/" component={Landing} />
               <Route exact path="/register" component={Register} />
               <Route exact path="/login" component={Login} />
+              <Route exact path="/postBook" component={PostBook} />
               <Route component={NotFoundPage} />
             </Switch>
           </div>

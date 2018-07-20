@@ -35,11 +35,8 @@ class AuthHeader extends Component {
     const { menuOpened } = this.state;
     return (
       <Fragment>
-        <Link
-          className="header__link header__link--createListing"
-          to="/createListing"
-        >
-          Create Listing
+        <Link className="header__link header__link--postBook" to="/postBook">
+          Post Textbook
         </Link>
         <div
           className="header__user"

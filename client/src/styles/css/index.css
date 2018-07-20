@@ -355,6 +355,32 @@ footer {
     .underConstruction__goback:hover {
       background-color: #1f3040; }
 
+.bookForm {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-width: 30rem; }
+  .bookForm__submit {
+    display: inline-block;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    border-radius: 3px;
+    margin: 0 0.5rem;
+    height: 4rem;
+    width: 9rem;
+    font-size: 1.8rem;
+    color: white;
+    background-color: #2b4258;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.2s;
+    align-self: flex-end; }
+    .bookForm__submit:hover {
+      background-color: #1f3040; }
+
 .login {
   flex: 1;
   display: flex;
@@ -426,3 +452,35 @@ footer {
     margin-top: 2rem; }
     .register__submit:hover {
       background-color: #1f3040; }
+
+.postBook {
+  width: 70rem;
+  margin: 2rem auto;
+  background-color: white;
+  border: 1px solid #eee;
+  border-radius: 4px;
+  padding: 2rem; }
+  .postBook__goback {
+    align-self: flex-start;
+    font-size: 1.8rem;
+    padding: 1rem;
+    background-color: whitesmoke;
+    border-radius: 4px;
+    transition: all 0.2s;
+    margin-left: 1rem; }
+    .postBook__goback:hover {
+      background-color: #f0f0f0; }
+  .postBook__title {
+    align-self: flex-start;
+    padding-left: 1rem;
+    margin-top: 2rem;
+    font-size: 3rem;
+    font-weight: 700; }
+  .postBook__subtitle {
+    align-self: flex-start;
+    padding-left: 1rem;
+    font-size: 2rem;
+    font-weight: normal;
+    padding-bottom: 2rem;
+    margin-bottom: 2rem;
+    border-bottom: 2px solid #f3f3f3; }

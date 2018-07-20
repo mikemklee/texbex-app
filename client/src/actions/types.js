@@ -6,7 +6,7 @@ export const CLEAR_ERRORS = "CLEAR_ERRORS";
 export const SET_CURRENT_USER = "SET_CURRENT_USER";
 
 // book
-export const CREATE_BOOK = "CREATE_BOOK";
+export const POST_BOOK = "POST_BOOK";
 export const GET_BOOKS = "GET_BOOKS";
 export const GET_BOOK = "GET_BOOK";
 export const ADD_BOOK = "ADD_BOOK";

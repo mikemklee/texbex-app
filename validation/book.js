@@ -27,19 +27,18 @@ module.exports = function validateBookInput(data) {
   // Validate course
   if (Validator.isEmpty(data.course)) {
     console.log(data.course);
-    errors.course = "The course that uses this textbook is required";
+    errors.course = "Which course is this textbook used for?";
   }
 
   // Validate description
   if (
     !Validator.isLength(data.description, {
       min: 2,
-      max: 1000
+      max: 300
     })
   ) {
     console.log(data.description);
-    errors.description =
-      "Description needs to be between 2 and 1000 characters";
+    errors.description = "Description needs to be between 2 and 300 characters";
   }
 
   if (Validator.isEmpty(data.description)) {

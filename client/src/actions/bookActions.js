@@ -5,18 +5,18 @@ import {
   CLEAR_ERRORS,
   GET_BOOKS,
   GET_BOOK,
-  CREATE_BOOK,
+  POST_BOOK,
   DELETE_BOOK,
   BOOK_LOADING
 } from "./types";
 
-// Create Book
-export const createBook = (bookData, history) => dispatch => {
+// Post Book
+export const postBook = (bookData, history) => dispatch => {
   dispatch(clearErrors());
   axios
     .post("/api/books", bookData)
     .then(res => {
-      dispatch({ type: CREATE_BOOK, payload: res.data });
+      dispatch({ type: POST_BOOK, payload: res.data });
       history.push("/books");
     })
     .catch(error =>

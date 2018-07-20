@@ -1,9 +1,4 @@
-import {
-  CREATE_BOOK,
-  GET_BOOKS,
-  GET_BOOK,
-  DELETE_BOOK
-} from "../actions/types";
+import { POST_BOOK, GET_BOOKS, GET_BOOK, DELETE_BOOK } from "../actions/types";
 
 const initialState = {
   loading: false,
@@ -13,7 +8,7 @@ const initialState = {
 
 export default (state = initialState, action) => {
   switch (action.type) {
-    case CREATE_BOOK:
+    case POST_BOOK:
       return {
         ...state,
         books: [action.payload, ...state.books]
