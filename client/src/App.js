@@ -7,6 +7,7 @@ import store from "./store";
 
 // Components
 import Header from "components/header/Header";
+import Landing from "components/landing/Landing";
 import NotFoundPage from "components/common/NotFoundPage";
 
 class App extends Component {
@@ -17,6 +18,7 @@ class App extends Component {
           <div className="App">
             <Header />
             <Switch>
+              <Route exact path="/" component={Landing} />
               <Route component={NotFoundPage} />
             </Switch>
           </div>
