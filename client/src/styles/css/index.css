@@ -56,7 +56,7 @@ footer {
   padding-top: 0.2rem; }
   .header__brand {
     font-size: 3rem;
-    font-weight: 400;
+    font-weight: 300;
     font-family: "Assistant", sans-serif;
     margin-right: 1rem; }
   .header__link {
@@ -64,7 +64,7 @@ footer {
     text-decoration: none;
     margin: 0 0.5rem;
     padding: 0.5rem 1rem;
-    letter-spacing: -1px;
+    letter-spacing: -0.5px;
     background-color: transparent;
     border-radius: 4px;
     transition: all 0.3s; }
@@ -76,9 +76,9 @@ footer {
       color: white; }
       .header__link--signup:hover {
         background-color: #7097e6; }
-    .header__link--createEvent {
+    .header__link--createListing {
       background-color: whitesmoke; }
-      .header__link--createEvent:hover {
+      .header__link--createListing:hover {
         background-color: #ededed; }
 
 .header__left {
@@ -153,10 +153,10 @@ footer {
   align-items: center;
   width: 38rem; }
   .landing__title {
-    font-size: 3rem;
+    font-size: 4.5rem;
     line-height: 1; }
   .landing__subtitle {
-    font-size: 2.2rem;
+    font-size: 2.4rem;
     margin-bottom: 1rem; }
   .landing__search {
     width: 100%;
@@ -337,4 +337,76 @@ footer {
     margin-top: 2rem;
     width: 10rem; }
     .underConstruction__goback:hover {
+      background-color: #5281e1; }
+
+.login {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; }
+  .login__title {
+    font-size: 3rem;
+    font-weight: 600; }
+  .login__form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-width: 30rem; }
+  .login__submit {
+    display: inline-block;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    border-radius: 3px;
+    margin: 0 0.5rem;
+    height: 4rem;
+    width: 9rem;
+    font-size: 1.8rem;
+    color: white;
+    background-color: #7097e6;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.2s;
+    margin-top: 2rem; }
+    .login__submit:hover {
+      background-color: #5281e1; }
+
+.register {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; }
+  .register__title {
+    font-size: 3rem;
+    font-weight: 600; }
+  .register__subtitle {
+    font-size: 1.8rem; }
+  .register__form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-width: 30rem; }
+  .register__submit {
+    display: inline-block;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    border-radius: 3px;
+    margin: 0 0.5rem;
+    height: 4rem;
+    width: 9rem;
+    font-size: 1.8rem;
+    color: white;
+    background-color: #7097e6;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.2s;
+    margin-top: 2rem; }
+    .register__submit:hover {
       background-color: #5281e1; }

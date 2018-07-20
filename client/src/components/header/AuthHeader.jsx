@@ -36,10 +36,10 @@ class AuthHeader extends Component {
     return (
       <Fragment>
         <Link
-          className="header__link header__link--createEvent"
-          to="/createEvent"
+          className="header__link header__link--createListing"
+          to="/createListing"
         >
-          Host Event
+          Create Listing
         </Link>
         <div
           className="header__user"

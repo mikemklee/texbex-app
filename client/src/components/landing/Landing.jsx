@@ -26,7 +26,6 @@ class Landing extends Component {
 
   onChange = event => {
     this.setState({ [event.target.name]: event.target.value });
-    console.log(event.target.name);
   };
 
   render() {

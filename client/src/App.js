@@ -8,6 +8,8 @@ import store from "./store";
 // Components
 import Header from "components/header/Header";
 import Landing from "components/landing/Landing";
+import Register from "components/auth/Register";
+import Login from "components/auth/Login";
 import NotFoundPage from "components/common/NotFoundPage";
 
 class App extends Component {
@@ -19,6 +21,8 @@ class App extends Component {
             <Header />
             <Switch>
               <Route exact path="/" component={Landing} />
+              <Route exact path="/register" component={Register} />
+              <Route exact path="/login" component={Login} />
               <Route component={NotFoundPage} />
             </Switch>
           </div>
