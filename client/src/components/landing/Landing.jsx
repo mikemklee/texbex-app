@@ -33,6 +33,9 @@ class Landing extends Component {
 
     return (
       <div className="landing container">
+        <div className="landing__logo">
+          <img src="assets/exchange-navy.png" />
+        </div>
         <p className="landing__title">Texbex</p>
         <p className="landing__subtitle">Trading textbooks made simple.</p>
         <form className="landing__search" onSubmit={this.onSubmit}>

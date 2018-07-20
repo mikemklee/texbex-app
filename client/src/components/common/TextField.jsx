@@ -17,6 +17,7 @@ const TextField = ({
     <div className="text__field">
       {label && <h6 className="text__field__label">{label}</h6>}
       <input
+        autoComplete="off"
         type={type}
         className={classnames("text__field__input", {
           "text__field__input--invalid": error

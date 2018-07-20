@@ -1,5 +1,5 @@
 .header {
-  height: 6.5rem;
+  height: 6rem;
   background-color: #fff;
   border-bottom: 1px solid #eee;
   display: flex;
@@ -27,12 +27,12 @@
     }
 
     &--signup {
-      background-color: rgba($blue, 0.7);
+      background-color: $navy;
       font-weight: 600;
       color: white;
 
       &:hover {
-        background-color: $blue;
+        background-color: darken($navy, 7%);
       }
     }
 
