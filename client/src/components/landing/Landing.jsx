@@ -5,8 +5,6 @@ import { connect } from "react-redux";
 // components
 import TextField from "components/common/TextField";
 
-//TODO: implement search functionality
-
 class Landing extends Component {
   state = {
     searchTerm: "",
