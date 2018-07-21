@@ -26,6 +26,9 @@ class Header extends Component {
             <Link className="header__brand" to="/">
               Texbex
             </Link>
+            <Link className="header__link" to="/books">
+              Textbooks
+            </Link>
           </div>
           <div className="header__right">
             {isAuthenticated ? (

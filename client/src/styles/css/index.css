@@ -48,12 +48,11 @@ footer {
   width: 100%; }
 
 .header {
-  height: 6rem;
+  height: 5.5rem;
   background-color: #fff;
   border-bottom: 1px solid #eee;
   display: flex;
-  align-items: center;
-  padding-top: 0.2rem; }
+  align-items: center; }
   .header__brand {
     font-size: 3rem;
     font-weight: 300;
@@ -66,19 +65,21 @@ footer {
     padding: 0.5rem 1rem;
     letter-spacing: -0.5px;
     background-color: transparent;
-    border-radius: 4px;
+    border-radius: 3px;
     transition: all 0.3s; }
     .header__link:hover {
       background-color: whitesmoke; }
     .header__link--signup {
-      background-color: #2b4258;
+      border: 2px solid #2b4258;
+      padding: 0.3rem 1rem;
       font-weight: 600;
-      color: white; }
+      color: #2b4258; }
       .header__link--signup:hover {
-        background-color: #1f3040; }
-    .header__link--createListing {
+        background-color: #2b4258;
+        color: white; }
+    .header__link--postBook {
       background-color: whitesmoke; }
-      .header__link--createListing:hover {
+      .header__link--postBook:hover {
         background-color: #ededed; }
 
 .header__left {

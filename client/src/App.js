@@ -12,6 +12,8 @@ import Register from "components/auth/Register";
 import Login from "components/auth/Login";
 import PostBook from "components/postBook/PostBook";
 import NotFoundPage from "components/common/NotFoundPage";
+import BooksRecent from "./components/books/BooksRecent";
+import BooksSearched from "./components/books/BooksSearched";
 
 class App extends Component {
   render() {
@@ -24,6 +26,12 @@ class App extends Component {
               <Route exact path="/" component={Landing} />
               <Route exact path="/register" component={Register} />
               <Route exact path="/login" component={Login} />
+              <Route exact path="/books" component={BooksRecent} />
+              <Route
+                exact
+                path="/books/:searchTerm"
+                component={BooksSearched}
+              />
               <Route exact path="/postBook" component={PostBook} />
               <Route component={NotFoundPage} />
             </Switch>

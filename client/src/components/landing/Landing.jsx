@@ -21,7 +21,7 @@ class Landing extends Component {
 
   onSubmit = event => {
     event.preventDefault();
-    alert(this.state.searchTerm);
+    this.props.history.push(`/books/${this.state.searchTerm}`);
   };
 
   onChange = event => {

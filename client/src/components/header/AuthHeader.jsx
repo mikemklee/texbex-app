@@ -36,7 +36,7 @@ class AuthHeader extends Component {
     return (
       <Fragment>
         <Link className="header__link header__link--postBook" to="/postBook">
-          Post Textbook
+          Sell Textbooks
         </Link>
         <div
           className="header__user"
