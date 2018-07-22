@@ -1,0 +1,39 @@
+.books {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: min-content 1fr;
+  grid-column-gap: 1rem; }
+  .books__header {
+    border: 1px solid #eee;
+    background-color: #fff;
+    border-radius: 3px;
+    margin: 1rem 0;
+    grid-column: span 2;
+    padding: 2rem;
+    font-size: 1.8rem;
+    font-weight: 600; }
+  .books__item {
+    display: grid;
+    grid-template-columns: 4fr 2fr;
+    grid-template-rows: repeat(5, min-content);
+    padding: 2rem;
+    background-color: #fff;
+    border: 1px solid #eee;
+    border-radius: 3px; }
+    .books__item__title {
+      grid-column: span 2;
+      font-size: 1.8rem;
+      font-weight: 600; }
+    .books__item__course {
+      grid-column: span 2;
+      font-size: 1.8rem; }
+    .books__item__desc {
+      grid-column: span 2;
+      font-size: 1.8rem; }
+    .books__item__seller {
+      grid-column: span 1;
+      font-size: 1.8rem; }
+    .books__item__date {
+      grid-column: span 1;
+      font-size: 1.8rem;
+      justify-self: end; }

@@ -15,15 +15,20 @@ class BooksRecent extends Component {
     const { books } = this.props.book;
 
     return (
-      <div>
-        <h1>Recent Books</h1>
+      <div className="books container">
+        <div className="books__header">Recent Listings</div>
         {books.map(book => (
-          <div key={book._id}>
-            <h1>{book.title}</h1>
-            <h1>{book.course}</h1>
-            <h1>{book.description}</h1>
-            <h1>{book.seller}</h1>
-            <h1>{moment(book.date).format("Do MMMM, YYYY")}</h1>
+          <div key={book._id} className="books__item">
+            <div className="books__item__title">{book.title}</div>
+            <div className="books__item__course">{book.course}</div>
+            <div className="books__item__desc">{book.description}</div>
+            <div className="books__item__date">
+              {moment(book.date).format("Do MMMM, YYYY")}
+            </div>
+            <div className="books__item__actions">
+              <button className="books__item__actions--pin">Pin</button>
+              <button className="books__item__actions--contact">Contact</button>
+            </div>
           </div>
         ))}
       </div>
