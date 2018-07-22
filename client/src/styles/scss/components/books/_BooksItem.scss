@@ -2,11 +2,22 @@
   display: grid;
   grid-template-columns: 4fr 2fr;
   grid-template-rows: repeat(5, min-content);
-  padding: 2rem;
+  padding: 1rem 2rem;
   background-color: #fff;
   border: 1px solid #eee;
   border-radius: 3px;
   font-size: 1.6rem;
+
+  &:hover {
+    background-color: darken(white, 1%);
+  }
+
+  & > * {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
   &__title {
     grid-column: span 1;
     font-size: 1.8rem;
@@ -20,7 +31,7 @@
   }
   &__course {
     grid-column: span 2;
-    font-size: 1.8rem;
+    font-size: 1.6rem;
 
     span:nth-of-type(1) {
       font-weight: 600;

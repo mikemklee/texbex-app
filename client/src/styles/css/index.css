@@ -573,11 +573,17 @@ footer {
   display: grid;
   grid-template-columns: 4fr 2fr;
   grid-template-rows: repeat(5, min-content);
-  padding: 2rem;
+  padding: 1rem 2rem;
   background-color: #fff;
   border: 1px solid #eee;
   border-radius: 3px;
   font-size: 1.6rem; }
+  .books__item:hover {
+    background-color: #fcfcfc; }
+  .books__item > * {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis; }
   .books__item__title {
     grid-column: span 1;
     font-size: 1.8rem;
@@ -589,7 +595,7 @@ footer {
     justify-self: end; }
   .books__item__course {
     grid-column: span 2;
-    font-size: 1.8rem; }
+    font-size: 1.6rem; }
     .books__item__course span:nth-of-type(1) {
       font-weight: 600;
       margin-right: 0.5rem; }
@@ -636,3 +642,125 @@ footer {
         background-color: #ededed; }
       .books__item__actions--keep span {
         margin-left: 0.5rem; }
+
+.modalContact {
+  position: absolute;
+  outline: none;
+  top: 15rem;
+  left: 40rem;
+  right: 40rem;
+  display: grid;
+  grid-template-columns: 4fr 2fr;
+  grid-template-rows: repeat(5, min-content);
+  grid-row-gap: 1rem;
+  padding: 1rem 2rem;
+  background-color: #fff;
+  border: 2px solid #eee;
+  box-shadow: 5px 5px 50px #ddd;
+  border-radius: 3px;
+  font-size: 1.6rem; }
+  .modalContact__title {
+    grid-column: span 1;
+    font-size: 2rem;
+    font-weight: 600; }
+  .modalContact__close {
+    grid-column: span 1;
+    align-self: start;
+    justify-self: end;
+    font-size: 4rem;
+    width: 4rem;
+    background: transparent;
+    border: none;
+    outline: none;
+    opacity: 0.5;
+    cursor: pointer; }
+  .modalContact__course {
+    grid-column: span 2;
+    font-size: 1.6rem; }
+    .modalContact__course span:nth-of-type(1) {
+      font-weight: 600;
+      margin-right: 0.5rem; }
+  .modalContact__desc {
+    grid-column: span 2; }
+  .modalContact__date {
+    grid-column: span 1;
+    justify-self: start;
+    align-self: center; }
+  .modalContact__price {
+    grid-column: span 1;
+    font-size: 1.8rem;
+    font-weight: 600;
+    justify-self: end; }
+  .modalContact__sellerInfo {
+    grid-column: span 2;
+    border-top: 1.5px solid #eee;
+    padding-top: 1rem;
+    display: flex;
+    flex-direction: column; }
+    .modalContact__sellerInfo--heading p {
+      font-weight: 600;
+      font-size: 1.8rem;
+      line-height: 1; }
+    .modalContact__sellerInfo--email, .modalContact__sellerInfo--phone {
+      align-self: flex-end; }
+  .modalContact__inquiry {
+    grid-column: span 2;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end; }
+    .modalContact__inquiry .textarea {
+      margin: 0.5rem 0;
+      align-self: stretch; }
+      .modalContact__inquiry .textarea__input {
+        font-family: "Assistant", sans-serif;
+        font-size: 1.8rem;
+        outline: none;
+        width: 100%;
+        height: 4rem;
+        border: 2px solid #f3f3f3;
+        border-radius: 3px;
+        padding-left: 1rem;
+        margin-bottom: 0.5rem;
+        transition: all 0.2s; }
+        .modalContact__inquiry .textarea__input--invalid {
+          border-color: red; }
+          .modalContact__inquiry .textarea__input--invalid::placeholder {
+            color: red; }
+        .modalContact__inquiry .textarea__input:focus {
+          border-color: #2b4258; }
+          .modalContact__inquiry .textarea__input:focus::placeholder {
+            color: currentColor; }
+      .modalContact__inquiry .textarea__info, .modalContact__inquiry .textarea__error {
+        line-height: 1;
+        padding: 0.2rem 1rem;
+        font-size: 1.6rem; }
+      .modalContact__inquiry .textarea__label {
+        font-size: 1.8rem;
+        padding-left: 1rem; }
+      .modalContact__inquiry .textarea__error {
+        color: red; }
+      .modalContact__inquiry .textarea__input {
+        font-size: 1.6rem;
+        padding: 1rem;
+        min-height: 8rem; }
+    .modalContact__inquiry--submit {
+      display: inline-block;
+      border: none;
+      outline: none;
+      cursor: pointer;
+      border-radius: 3px;
+      margin: 0 0.5rem;
+      height: 4rem;
+      width: 9rem;
+      font-size: 1.8rem;
+      color: white;
+      background-color: #2b4258;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      transition: all 0.2s;
+      font-size: 1.6rem;
+      height: 3.5rem;
+      width: 7rem; }
+      .modalContact__inquiry--submit:hover {
+        background-color: #1f3040; }
