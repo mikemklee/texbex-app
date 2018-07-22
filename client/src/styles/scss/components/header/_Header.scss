@@ -40,10 +40,13 @@
     }
 
     &--postBook {
-      background-color: whitesmoke;
+      border: 2px solid $navy;
+      padding: 0.3rem 1rem;
+      font-weight: 600;
 
       &:hover {
-        background-color: darken(whitesmoke, 3%);
+        background-color: $navy;
+        color: white;
       }
     }
   }

@@ -80,9 +80,12 @@ footer {
         background-color: #2b4258;
         color: white; }
     .header__link--postBook {
-      background-color: whitesmoke; }
+      border: 2px solid #2b4258;
+      padding: 0.3rem 1rem;
+      font-weight: 600; }
       .header__link--postBook:hover {
-        background-color: #ededed; }
+        background-color: #2b4258;
+        color: white; }
 
 .header__left {
   display: flex;
@@ -502,59 +505,65 @@ footer {
     padding: 2rem;
     font-size: 2.4rem;
     font-weight: 300; }
-  .books__item {
-    display: grid;
-    grid-template-columns: 4fr 2fr;
-    grid-template-rows: repeat(5, min-content);
-    padding: 2rem;
-    background-color: #fff;
-    border: 1px solid #eee;
-    border-radius: 3px;
-    font-size: 1.6rem; }
-    .books__item__title {
-      grid-column: span 2;
-      font-size: 1.8rem;
+    .books__header span {
       font-weight: 600; }
-    .books__item__course {
-      grid-column: span 2;
-      font-size: 1.8rem; }
-    .books__item__desc {
-      grid-column: span 2; }
-    .books__item__date {
-      grid-column: span 1;
-      justify-self: start;
-      align-self: center; }
-    .books__item__actions {
-      margin-top: 1rem;
-      grid-column: span 1;
+
+.books__item {
+  display: grid;
+  grid-template-columns: 4fr 2fr;
+  grid-template-rows: repeat(5, min-content);
+  padding: 2rem;
+  background-color: #fff;
+  border: 1px solid #eee;
+  border-radius: 3px;
+  font-size: 1.6rem; }
+  .books__item__title {
+    grid-column: span 2;
+    font-size: 1.8rem;
+    font-weight: 600; }
+  .books__item__course {
+    grid-column: span 2;
+    font-size: 1.8rem; }
+  .books__item__desc {
+    grid-column: span 2; }
+  .books__item__date {
+    grid-column: span 1;
+    justify-self: start;
+    align-self: center; }
+  .books__item__actions {
+    margin-top: 1rem;
+    grid-column: span 1;
+    display: flex;
+    justify-content: flex-end; }
+    .books__item__actions--keep, .books__item__actions--contact {
+      display: inline-block;
+      border: none;
+      outline: none;
+      cursor: pointer;
+      border-radius: 3px;
+      margin: 0 0.5rem;
+      height: 4rem;
+      width: 9rem;
+      font-size: 1.8rem;
+      color: white;
+      background-color: #2b4258;
       display: flex;
-      justify-content: flex-end; }
-      .books__item__actions--pin, .books__item__actions--contact {
-        display: inline-block;
-        border: none;
-        outline: none;
-        cursor: pointer;
-        border-radius: 3px;
-        margin: 0 0.5rem;
-        height: 4rem;
-        width: 9rem;
-        font-size: 1.8rem;
-        color: white;
-        background-color: #2b4258;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        transition: all 0.2s;
-        font-size: 1.4rem;
-        padding: 0.2rem 0.5rem;
-        height: 3rem;
-        width: 6rem;
-        margin: 0;
-        margin-left: 1rem; }
-        .books__item__actions--pin:hover, .books__item__actions--contact:hover {
-          background-color: #1f3040; }
-      .books__item__actions--pin {
-        color: #555;
-        background-color: whitesmoke; }
-        .books__item__actions--pin:hover {
-          background-color: #ededed; }
+      justify-content: center;
+      align-items: center;
+      transition: all 0.2s;
+      font-size: 1.4rem;
+      padding: 0.2rem 0.5rem;
+      height: 3rem;
+      width: 6rem;
+      margin: 0;
+      margin-left: 1rem; }
+      .books__item__actions--keep:hover, .books__item__actions--contact:hover {
+        background-color: #1f3040; }
+    .books__item__actions--keep {
+      color: #555;
+      background-color: whitesmoke;
+      width: 7rem; }
+      .books__item__actions--keep:hover {
+        background-color: #ededed; }
+      .books__item__actions--keep span {
+        margin-left: 0.5rem; }

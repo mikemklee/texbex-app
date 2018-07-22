@@ -1,0 +1,56 @@
+.books__item {
+  display: grid;
+  grid-template-columns: 4fr 2fr;
+  grid-template-rows: repeat(5, min-content);
+  padding: 2rem;
+  background-color: #fff;
+  border: 1px solid #eee;
+  border-radius: 3px;
+  font-size: 1.6rem;
+  &__title {
+    grid-column: span 2;
+    font-size: 1.8rem;
+    font-weight: 600;
+  }
+  &__course {
+    grid-column: span 2;
+    font-size: 1.8rem;
+  }
+  &__desc {
+    grid-column: span 2;
+  }
+  &__date {
+    grid-column: span 1;
+    justify-self: start;
+    align-self: center;
+  }
+  &__actions {
+    margin-top: 1rem;
+    grid-column: span 1;
+    display: flex;
+    justify-content: flex-end;
+    &--keep,
+    &--contact {
+      @include button;
+      font-size: 1.4rem;
+      padding: 0.2rem 0.5rem;
+      height: 3rem;
+      width: 6rem;
+      margin: 0;
+      margin-left: 1rem;
+    }
+    &--keep {
+      color: #555;
+      background-color: whitesmoke;
+      width: 7rem;
+
+      &:hover {
+        background-color: darken(whitesmoke, 3%);
+      }
+
+      span {
+        margin-left: 0.5rem;
+      }
+    }
+  }
+}
