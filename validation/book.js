@@ -4,8 +4,9 @@ const isEmpty = require("./isEmpty");
 module.exports = function validateBookInput(data) {
   let errors = {};
 
-  data.title = !isEmpty(data.title) ? data.title : "";
-  data.course = !isEmpty(data.course) ? data.course : "";
+  data.title = !isEmpty(data.title) ? data.title.toLowerCase() : "";
+  data.course = !isEmpty(data.course) ? data.course.toLowerCase() : "";
+  data.price = !isEmpty(data.price) ? data.price : "";
   data.description = !isEmpty(data.description) ? data.description : "";
 
   // Validate title
@@ -27,7 +28,13 @@ module.exports = function validateBookInput(data) {
   // Validate course
   if (Validator.isEmpty(data.course)) {
     console.log(data.course);
-    errors.course = "Which course is this textbook used for?";
+    errors.course = "Course is required";
+  }
+
+  // Validate price
+  if (Validator.isEmpty(data.price)) {
+    console.log(data.price);
+    errors.price = "price is required";
   }
 
   // Validate description

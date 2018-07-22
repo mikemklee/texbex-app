@@ -1,0 +1,39 @@
+.price__field {
+  @include formField;
+  position: relative;
+
+  &__input {
+    font-family: $font-main;
+    font-size: 1.8rem;
+    outline: none;
+    width: 100%;
+    height: 4rem;
+    border: 2px solid $off-white;
+    border-radius: 3px;
+    padding-left: 1rem;
+    margin-bottom: 0.5rem;
+    transition: all 0.2s;
+    &--invalid {
+      border-color: red;
+      &::placeholder {
+        color: red;
+      }
+    }
+    &:focus {
+      border-color: $navy;
+      &::placeholder {
+        color: currentColor;
+      }
+    }
+  }
+
+  &__preview {
+    position: absolute;
+    right: 1rem;
+    bottom: 1.5rem;
+    line-height: 1;
+    padding: 0.2rem 0.5rem;
+    font-size: 1.6rem;
+    font-weight: 400;
+  }
+}

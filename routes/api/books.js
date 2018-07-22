@@ -1,6 +1,7 @@
 const express = require("express");
 const router = express.Router();
 const passport = require("passport");
+const _ = require("lodash");
 
 // Load Validation
 const validateBookInput = require("../../validation/book");
@@ -22,12 +23,10 @@ router.get("/", (req, res) => {
 // @desc    Search books
 // @access  Public
 router.get("/search/:searchTerm", (req, res) => {
+  const word = req.params.searchTerm.toLowerCase();
+
   Book.find({
-    $or: [
-      { title: req.params.searchTerm },
-      { course: req.params.searchTerm },
-      { description: req.params.searchTerm }
-    ]
+    $or: [{ title: word }, { course: word }, { description: word }]
   })
     .sort({ date: -1 })
     .then(books => {
@@ -78,9 +77,11 @@ router.post(
       user: req.user.id,
       title: req.body.title,
       course: req.body.course,
+      school: req.body.school,
       description: req.body.description,
       seller: req.body.seller,
       sellerPhoto: req.body.sellerPhoto,
+      price: req.body.price,
       date: req.body.date
     });
     newBook.save().then(book => res.json(book));

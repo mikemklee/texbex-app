@@ -9,12 +9,15 @@ import { postBook } from "actions/bookActions";
 
 // components
 import TextField from "../common/TextField";
+import PriceField from "../common/PriceField";
 import TextAreaField from "../common/TextAreaField";
 
 class BookForm extends Component {
   state = {
     title: "",
     course: "",
+    school: "",
+    price: "",
     description: "",
     date: moment(),
     errors: {}
@@ -32,12 +35,21 @@ class BookForm extends Component {
     });
   };
 
+  onPriceChange = event => {
+    const price = event.target.value;
+    if (!price || price.match(/^\d{1,}(\.\d{0,2})?$/)) {
+      this.setState({ price });
+    }
+  };
+
   onSubmit = event => {
     event.preventDefault();
     const { user } = this.props.auth;
     const newBook = {
       title: this.state.title,
       course: this.state.course,
+      school: this.state.school,
+      price: this.state.price,
       description: this.state.description,
       date: this.state.date,
       seller: user.name,
@@ -66,6 +78,22 @@ class BookForm extends Component {
           value={this.state.course}
           onChange={this.onChange}
           error={errors.course}
+        />
+        <TextField
+          placeholder="e.g., University of Toronto"
+          name="school"
+          label="School"
+          value={this.state.school}
+          onChange={this.onChange}
+          error={errors.school}
+        />
+        <PriceField
+          placeholder="e.g., enter 4000 for $40.00"
+          name="price"
+          label="Price"
+          value={this.state.price}
+          onChange={this.onPriceChange}
+          error={errors.price}
         />
         <TextAreaField
           placeholder="e.g., in mint condition, with no markings or rips"

@@ -8,13 +8,24 @@
   border-radius: 3px;
   font-size: 1.6rem;
   &__title {
-    grid-column: span 2;
+    grid-column: span 1;
     font-size: 1.8rem;
     font-weight: 600;
+  }
+  &__price {
+    grid-column: span 1;
+    font-size: 1.8rem;
+    font-weight: 600;
+    justify-self: end;
   }
   &__course {
     grid-column: span 2;
     font-size: 1.8rem;
+
+    span:nth-of-type(1) {
+      font-weight: 600;
+      margin-right: 0.5rem;
+    }
   }
   &__desc {
     grid-column: span 2;
