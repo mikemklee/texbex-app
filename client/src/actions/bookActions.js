@@ -4,6 +4,7 @@ import {
   GET_ERRORS,
   CLEAR_ERRORS,
   GET_BOOKS,
+  SEARCH_BOOKS,
   GET_BOOK,
   POST_BOOK,
   DELETE_BOOK,
@@ -44,6 +45,15 @@ export const getBooks = () => dispatch => {
         payload: null
       })
     );
+};
+
+// Search Books
+export const searchBooks = searchTerm => dispatch => {
+  dispatch(setBookLoading());
+  axios
+    .get(`/api/books/search/${searchTerm}`)
+    .then(res => dispatch({ type: SEARCH_BOOKS, payload: res.data }))
+    .catch(error => dispatch({ type: SEARCH_BOOKS, payload: null }));
 };
 
 // Set loading state

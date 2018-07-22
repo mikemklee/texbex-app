@@ -1,4 +1,10 @@
-import { POST_BOOK, GET_BOOKS, GET_BOOK, DELETE_BOOK } from "../actions/types";
+import {
+  POST_BOOK,
+  GET_BOOKS,
+  GET_BOOK,
+  DELETE_BOOK,
+  SEARCH_BOOKS
+} from "../actions/types";
 
 const initialState = {
   loading: false,
@@ -25,6 +31,12 @@ export default (state = initialState, action) => {
         loading: false
       };
     case GET_BOOKS:
+      return {
+        ...state,
+        books: action.payload,
+        loading: false
+      };
+    case SEARCH_BOOKS:
       return {
         ...state,
         books: action.payload,

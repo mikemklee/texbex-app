@@ -2,6 +2,9 @@ import React, { Component } from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import { Provider } from "react-redux";
 
+// Utils
+import checkTokenExpiry from "utils/checkTokenExpiry";
+
 // Redux store
 import store from "./store";
 
@@ -16,6 +19,9 @@ import BooksRecent from "./components/books/BooksRecent";
 import BooksSearched from "./components/books/BooksSearched";
 
 class App extends Component {
+  componentDidMount() {
+    checkTokenExpiry();
+  }
   render() {
     return (
       <Provider store={store}>

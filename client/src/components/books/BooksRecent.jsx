@@ -20,7 +20,9 @@ class BooksRecent extends Component {
         {books.map(book => (
           <div key={book._id} className="books__item">
             <div className="books__item__title">{book.title}</div>
-            <div className="books__item__course">{book.course}</div>
+            <div className="books__item__course">
+              {book.course.toUpperCase()}
+            </div>
             <div className="books__item__desc">{book.description}</div>
             <div className="books__item__date">
               {moment(book.date).format("Do MMMM, YYYY")}

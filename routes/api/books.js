@@ -18,6 +18,29 @@ router.get("/", (req, res) => {
     .catch(error => res.status(404));
 });
 
+// @route   GET api/books/search/:searchTerm
+// @desc    Search books
+// @access  Public
+router.get("/search/:searchTerm", (req, res) => {
+  Book.find({
+    $or: [
+      { title: req.params.searchTerm },
+      { course: req.params.searchTerm },
+      { description: req.params.searchTerm }
+    ]
+  })
+    .sort({ date: -1 })
+    .then(books => {
+      if (books.length === 0) {
+        console.log("no books!");
+        errors.nobooks = "No textbooks found!";
+        res.status(404).json(errors);
+      }
+      res.json(books);
+    })
+    .catch(error => res.status(404).json({ books: "No textbooks found!" }));
+});
+
 // @route   GET api/book/id/:id
 // @desc    Get book by ID
 // @access  Public
