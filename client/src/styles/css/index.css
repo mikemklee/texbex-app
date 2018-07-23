@@ -647,10 +647,10 @@ footer {
   position: absolute;
   outline: none;
   top: 15rem;
-  left: 40rem;
-  right: 40rem;
+  left: 25%;
+  right: 25%;
   display: grid;
-  grid-template-columns: 4fr 2fr;
+  grid-template-columns: 4fr 1fr;
   grid-template-rows: repeat(5, min-content);
   grid-row-gap: 1rem;
   padding: 1rem 2rem;
@@ -695,14 +695,29 @@ footer {
     grid-column: span 2;
     border-top: 1.5px solid #eee;
     padding-top: 1rem;
-    display: flex;
-    flex-direction: column; }
-    .modalContact__sellerInfo--heading p {
+    display: grid;
+    grid-template-columns: min-content 1fr;
+    grid-template-rows: repeat(4, min-content); }
+    .modalContact__sellerInfo--heading {
+      grid-column: span 4;
       font-weight: 600;
       font-size: 1.8rem;
+      line-height: 1;
+      margin-bottom: 1rem; }
+    .modalContact__sellerInfo--photo {
+      align-self: center;
+      grid-column: 1/2;
+      grid-row: 2 / 5;
+      width: 4rem;
+      height: 4rem;
+      border-radius: 3px;
+      margin-right: 1rem; }
+    .modalContact__sellerInfo--name, .modalContact__sellerInfo--email, .modalContact__sellerInfo--phone {
+      grid-column: 2/3;
+      grid-row: span 1;
       line-height: 1; }
-    .modalContact__sellerInfo--email, .modalContact__sellerInfo--phone {
-      align-self: flex-end; }
+    .modalContact__sellerInfo--name {
+      font-weight: 600; }
   .modalContact__inquiry {
     grid-column: span 2;
     display: flex;

@@ -22,6 +22,7 @@ class BooksItem extends Component {
 
   render() {
     const { book } = this.props;
+    console.log(book);
     return (
       <div className="books__item">
         <div className="books__item__title">{_.startCase(book.title)}</div>
@@ -57,5 +58,9 @@ class BooksItem extends Component {
     );
   }
 }
+
+BooksItem.propTypes = {
+  book: PropTypes.object.isRequired
+};
 
 export default BooksItem;

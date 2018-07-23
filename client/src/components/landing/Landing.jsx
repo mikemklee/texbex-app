@@ -32,7 +32,7 @@ class Landing extends Component {
     return (
       <div className="landing container">
         <div className="landing__logo">
-          <img src="assets/exchange-navy.png" />
+          <img src="assets/exchange-navy.png" alt="logo" />
         </div>
         <p className="landing__title">Texbex</p>
         <p className="landing__subtitle">Trading textbooks made simple.</p>

@@ -38,6 +38,11 @@ class BooksRecent extends Component {
   }
 }
 
+BooksRecent.propTypes = {
+  book: PropTypes.object.isRequired,
+  getBooks: PropTypes.func.isRequired
+};
+
 const mapStateToProps = state => ({
   book: state.book
 });

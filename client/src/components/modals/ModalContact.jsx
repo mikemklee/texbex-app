@@ -69,8 +69,14 @@ class ModalContact extends Component {
         </div>
         <div className="modalContact__sellerInfo">
           <div className="modalContact__sellerInfo--heading">
-            <p>Contact seller directly or send an inquiry:</p>
+            Contact seller directly or send an inquiry:
           </div>
+          <img
+            className="modalContact__sellerInfo--photo"
+            src={book.sellerPhoto}
+            alt="seller"
+          />
+          <div className="modalContact__sellerInfo--name">{book.seller}</div>
           <div className="modalContact__sellerInfo--email">
             Email: test@test.com
           </div>
@@ -80,7 +86,7 @@ class ModalContact extends Component {
         </div>
         <div className="modalContact__inquiry">
           <TextAreaField
-            placeholder="Write a short message to the seller"
+            placeholder={`Write a short message to ${book.seller}`}
             name="message"
             value={this.state.message}
             onChange={this.onChange}

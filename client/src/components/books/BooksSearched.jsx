@@ -44,6 +44,11 @@ class BooksSearched extends Component {
   }
 }
 
+BooksSearched.propTypes = {
+  book: PropTypes.object.isRequired,
+  searchBooks: PropTypes.func.isRequired
+};
+
 const mapStateToProps = state => ({
   book: state.book
 });

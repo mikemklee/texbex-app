@@ -5,9 +5,7 @@ import {
   CLEAR_ERRORS,
   GET_BOOKS,
   SEARCH_BOOKS,
-  GET_BOOK,
   POST_BOOK,
-  DELETE_BOOK,
   BOOK_LOADING
 } from "./types";
 
