@@ -66,7 +66,7 @@ class BookForm extends Component {
         <TextField
           placeholder="e.g., Managerial Accounting 8th Edition"
           name="title"
-          label="Title"
+          label="* Title"
           value={this.state.title}
           onChange={this.onChange}
           error={errors.title}
@@ -74,7 +74,7 @@ class BookForm extends Component {
         <TextField
           placeholder="e.g., RSM222"
           name="course"
-          label="Course Code"
+          label="* Course Code"
           value={this.state.course}
           onChange={this.onChange}
           error={errors.course}
@@ -90,7 +90,7 @@ class BookForm extends Component {
         <PriceField
           placeholder="e.g., enter 4000 for $40.00"
           name="price"
-          label="Price"
+          label="* Price"
           value={this.state.price}
           onChange={this.onPriceChange}
           error={errors.price}
@@ -98,7 +98,7 @@ class BookForm extends Component {
         <TextAreaField
           placeholder="e.g., in mint condition, with no markings or rips"
           name="description"
-          label="Description"
+          label="* Description"
           value={this.state.description}
           onChange={this.onChange}
           error={errors.description}

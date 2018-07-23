@@ -233,6 +233,7 @@ footer {
     font-size: 1.6rem; }
   .text__field__label {
     font-size: 1.8rem;
+    font-weight: 600;
     padding-left: 1rem; }
   .text__field__error {
     color: red; }
@@ -265,6 +266,7 @@ footer {
     font-size: 1.6rem; }
   .textarea__label {
     font-size: 1.8rem;
+    font-weight: 600;
     padding-left: 1rem; }
   .textarea__error {
     color: red; }
@@ -301,6 +303,7 @@ footer {
     font-size: 1.6rem; }
   .price__field__label {
     font-size: 1.8rem;
+    font-weight: 600;
     padding-left: 1rem; }
   .price__field__error {
     color: red; }
@@ -541,7 +544,7 @@ footer {
     padding-left: 1rem;
     margin-top: 2rem;
     font-size: 3rem;
-    font-weight: 700; }
+    font-weight: 600; }
   .postBook__subtitle {
     align-self: flex-start;
     padding-left: 1rem;
@@ -751,6 +754,7 @@ footer {
         font-size: 1.6rem; }
       .modalContact__inquiry .textarea__label {
         font-size: 1.8rem;
+        font-weight: 600;
         padding-left: 1rem; }
       .modalContact__inquiry .textarea__error {
         color: red; }

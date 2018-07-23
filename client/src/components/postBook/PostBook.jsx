@@ -11,9 +11,9 @@ class PostBook extends Component {
         <Link to="/books" className="postBook__goback">
           Go Back
         </Link>
-        <h1 className="postBook__title">Post New Textbook</h1>
+        <h1 className="postBook__title">Post Textbook for Sale</h1>
         <h1 className="postBook__subtitle">
-          Let's fill out some information about the textbook.
+          Let's fill out some information about your used textbook (* required)
         </h1>
         <BookForm />
       </div>
